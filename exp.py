@@ -212,7 +212,7 @@ def check_bgp_summary(connect_p):
 def check_default_route(connect_p):
     default_bgp = get_structured_data(cmd_set_default[2], connect_p)
     for bgp in default_bgp:
-        if bgp['weight' == 0]:
+        if bgp['weight'] == 0:
             nh_cmd = cmd_set_default[3] + bgp['next_hop']
             show_ip_route = get_structured_data(nh_cmd, connect_p)
             if show_ip_route[0]['port'] == 'Ve 98':
