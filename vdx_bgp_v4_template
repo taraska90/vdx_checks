@@ -1,0 +1,12 @@
+Value Filldown rbr_id (\d)
+Value Filldown router_id (\d+(\.\d+){3})
+Value neighbour (\d+(\.\d+){3})
+Value remote_as (\d+)
+Value state (ACTIV|CONN|ESTAB|OPENSp|ADMDN)
+
+Start
+ ^Rbridge-id : ${rbr_id}
+ ^  Router ID: ${router_id}\s+Local AS Number:\s.*
+ ^  ${neighbour}\s+${remote_as}\s+${state} -> Record
+
+EOF
