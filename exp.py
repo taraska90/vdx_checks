@@ -18,7 +18,7 @@ def get_auth_data(auth_flag='1pass'):
         user = input("Please enter username:\n")
         password = getpass.getpass(prompt='Enter switch password:\n')
     elif auth_flag == "1pass":
-        one_password_output = subprocess.run(["op", "item", "get", "leaf_admin", "--fields", "username,password"], stdout=subprocess.PIPE)
+        one_password_output = subprocess.run(["op", "item", "get", "leaf_a", "--fields", "username,password"], stdout=subprocess.PIPE)
         user, password = (((one_password_output.stdout.decode()).rstrip()).split(','))
     authen_data = {'user': user, 'password': password}
     return authen_data
