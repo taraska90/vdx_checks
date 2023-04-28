@@ -179,11 +179,11 @@ def get_bgp_summary(bgp_summary):
     '''
     Template: vdx_bgp_v4.template
     output:
-    [{'rbr_id': '1', 'router_id': '1.1.1.1', 'neighbour': '1.1.1.1', 'remote_as': '7979', 'state': 'ESTAB'},
-    {'rbr_id': '1', 'router_id': '1.1.1.1', 'neighbour': '1.1.1.1', 'remote_as': '7979', 'state': 'ESTAB'},
-    {'rbr_id': '1', 'router_id': '1.1.1.1', 'neighbour': '1.1.1.1', 'remote_as': '7979', 'state': 'ADMDN'},
-    {'rbr_id': '2', 'router_id': '1.1.1.1', 'neighbour': '1.1.1.1', 'remote_as': '7979', 'state': 'CONN'},
-    {'rbr_id': '2', 'router_id': '1.1.1.1', 'neighbour': '1.1.1.1', 'remote_as': '7979', 'state': 'ESTAB'}]
+    [{'rbr_id': '1', 'router_id': '1.1.1.1', 'neighbour': '1.1.1.1', 'remote_as': '71979', 'state': 'ESTAB'},
+    {'rbr_id': '1', 'router_id': '1.1.1.1', 'neighbour': '1.1.1.1', 'remote_as': '71979', 'state': 'ESTAB'},
+    {'rbr_id': '1', 'router_id': '1.1.1.1', 'neighbour': '1.1.1.1', 'remote_as': '71979', 'state': 'ADMDN'},
+    {'rbr_id': '2', 'router_id': '1.1.1.1', 'neighbour': '1.1.1.1', 'remote_as': '71979', 'state': 'CONN'},
+    {'rbr_id': '2', 'router_id': '1.1.1.1', 'neighbour': '1.1.1.1', 'remote_as': '71979', 'state': 'ESTAB'}]
     :return:
     '''
     bgp_status = {}
