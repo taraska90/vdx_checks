@@ -41,7 +41,7 @@ def create_host_params(hostname, auth_data, device_type='brocade_vdx'):
     return host_params
 
 def check_leaf_type(host):
-    result = re.search(r'(si|se)-(\w*)-.*', host)
+    result = re.search(r'(sii|sei)-(\w*)-.*', host)
     leaf_type = ''
     if (result.group(2) == 'siteA' or result.group(2) == 'siteB') and result.group(1) == 'si':
         leaf_type = 'vrf'
@@ -86,7 +86,7 @@ def get_uplink_checks(state):
             uplink_status[uplink['interface']]['speed'] = True
         else:
             uplink_status[uplink['interface']]['speed'] = False
-        if uplink['description'] == 'leaf l1 -> spine' or 'leaf l2 -> spine':
+        if uplink['description'] == 'leaf l1 to spine' or 'leaf l2 to spine':
             uplink_status[uplink['interface']]['is_uplink'] = True
         else:
             uplink_status[uplink['interface']]['is_uplink'] = False
