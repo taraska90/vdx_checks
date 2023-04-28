@@ -1,0 +1,14 @@
+Template, Hostname, Vendor, Command
+vdx_bgp_v4.template, .*, brocade_vdx, show ip bgp summary rbr all
+vdx_speed_rate.template, .*, brocade_vdx, show inter (fo\s\S+)
+vdx_interface_status.template, .*, brocade_vdx, show interface status rbr all
+vdx_isl_status.template, .*, brocade_vdx, show interface status rbrid all
+vdx_vrf.template, .*, brocade_vdx, show vrf
+vdx_bgp_v4_vrf.template, .*, brocade_vdx, show ip bgp summary vrf [\w-]+ rbridge-id all
+vdx_ip_bgp_routes.template, .*, brocade_vdx, show ip bgp routes (0\.0\.0\.0\/0)
+vdx_show_ip_route.template, .*, brocade_vdx, show ip route (?:\d+(\.\d+){3})
+vdx_ip_bgp_routes_vrf.template, .*, brocade_vdx, show ip bgp routes (0\.0\.0\.0\/0) vrf [\w-]+
+vdx_show_ip_route.template, .*, brocade_vdx, show ip route (\d+(\.\d+){3}\\\d+) vrf [\w-]+
+vdx_ipv6_bgp_routes.template, .*, brocade_vdx, show ipv6 bgp route \:\:
+vdx_show_ipv6_route.template, .*, brocade_vdx, show ipv6 route (\d+(\.\d+){3}\\\d+)
+vdx_bgp_v6.template, .*, brocade_vdx, show ipv6 bgp summary rbr all
